@@ -1,6 +1,7 @@
 # K6 demo
 
 ## K6 test executions
+
 ```sh
 > k6 run scripts/http/navtest.js
 // debugging
@@ -9,7 +10,7 @@
 
 ## K6 documentation
 
-- https://k6.io/docs/
+- <https://k6.io/docs/>
 
 ## Structure
 
@@ -30,7 +31,7 @@
 
 ## Set K6 intellisense
 
-- reference: https://k6.io/docs/misc/intellisense/
+- reference: <https://k6.io/docs/misc/intellisense/>
 - adds K6 intellisense plugin with following commands
 
 ```sh
@@ -38,3 +39,13 @@
 > npm install --save-dev @types/k6
 ```
 
+## Script recordig with HAR from browser with har-to-k6
+
+- get HAR from browser session using DEV tool
+- use following command to convert har to k6 js script
+
+```sh
+> har-to-k6 scripts/hars/02login.har -o scripts/hars/02login.js
+```
+
+- modify and use the generated js to create k6 scripts
